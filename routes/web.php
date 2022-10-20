@@ -5,7 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsuariosController;
 use App\Http\Controllers\productoController;
 use App\Http\Controllers\evelynController;
-use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\CustomerController;    
+use App\Http\Controllers\PedidosController;
 
 
 
@@ -41,4 +42,7 @@ Route::get('/productos',
 Route::get('/evelyn',
 [evelynController::class, 'listar']
 );
-Route:: get('/clientes',[CustomerController::class,'listar']); 
+Route:: get('/clientes',[CustomerController::class,'listar']
+);
+Route::get('/pedidos',[PedidosController::class,'listar']
+);
